@@ -9,7 +9,7 @@ var sassPaths = [
 ];
 
 gulp.task('sass', function () {
-    return gulp.src('scss/style.scss')
+    return gulp.src('sass/style.scss')
         .pipe(sourcemaps.init())
         .pipe($.sass({
             includePaths: sassPaths
@@ -23,5 +23,5 @@ gulp.task('sass', function () {
 });
 
 gulp.task('default', ['sass'], function () {
-    gulp.watch(['scss/**/*.scss'], ['sass']);
+    gulp.watch(['sass/**/*.scss'], ['sass']);
 });
