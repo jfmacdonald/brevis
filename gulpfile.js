@@ -45,7 +45,7 @@ var sassPaths = [
     'components/motion-ui/src'
 ];
 
-gulp.task('sass', function () {
+gulp.task('styles', function () {
     return gulp.src('sass/style.scss')
         .pipe($.sourcemaps.init())
         .pipe($.sass({
@@ -60,18 +60,18 @@ gulp.task('sass', function () {
 });
 
 gulp.task('component-scripts', function () {
-   return gulp.src(componentScripts)
-       .pipe($.babel({
-           presets: ['es2015'],
-           compact: true
-       }))
-       .pipe($.sourcemaps.init())
-       .pipe($.concat('components.js'))
-       .pipe(gulp.dest('./js'))
-       .pipe($.rename({suffix: '.min'}))
-       .pipe($.uglify())
-       .pipe($.sourcemaps.write('.')) // Creates sourcemap for minified Foundation JS
-       .pipe(gulp.dest('./js'))
+    return gulp.src(componentScripts)
+        .pipe($.babel({
+            presets: ['es2015'],
+            compact: true
+        }))
+        .pipe($.sourcemaps.init())
+        .pipe($.concat('components.js'))
+        .pipe(gulp.dest('./js'))
+        .pipe($.rename({suffix: '.min'}))
+        .pipe($.uglify())
+        .pipe($.sourcemaps.write('.')) // Creates sourcemap for minified Foundation JS
+        .pipe(gulp.dest('./js'))
 });
 
 gulp.task('theme-scripts', function () {
@@ -88,6 +88,9 @@ gulp.task('theme-scripts', function () {
         .pipe(gulp.dest('./js'))
 });
 
-gulp.task('default', ['sass'], function () {
-    gulp.watch(['sass/**/*.scss'], ['sass']);
+gulp.task('watch', function () {
+    gulp.watch(['sass/**/*.scss'], ['styles']);
+    gulp.watch(themeScripts, ['theme-scripts']);
 });
+
+gulp.task('default', ['styles', 'component-scripts', 'theme-scripts']);
