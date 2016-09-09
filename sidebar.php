@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package PontoPress
+ * @package FounderScores
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

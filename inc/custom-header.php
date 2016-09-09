@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package PontoPress
+ * @package FounderScores
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses pontopress_header_style()
+ * @uses founderscores_header_style()
  */
-function pontopress_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'pontopress_custom_header_args', array(
+function founderscores_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'founderscores_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'pontopress_header_style',
+		'wp-head-callback'       => 'founderscores_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'pontopress_custom_header_setup' );
+add_action( 'after_setup_theme', 'founderscores_custom_header_setup' );
 
-if ( ! function_exists( 'pontopress_header_style' ) ) :
+if ( ! function_exists( 'founderscores_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see pontopress_custom_header_setup().
+ * @see founderscores_custom_header_setup().
  */
-function pontopress_header_style() {
+function founderscores_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

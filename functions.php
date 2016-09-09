@@ -1,13 +1,13 @@
 <?php
 /**
- * PontoPress functions and definitions.
+ * FounderScores functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package PontoPress
+ * @package FounderScores
  */
 
-if ( ! function_exists( 'pontopress_setup' ) ) :
+if ( ! function_exists( 'founderscores_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'pontopress_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function pontopress_setup() {
+function founderscores_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on PontoPress, use a find and replace
-	 * to change 'pontopress' to the name of your theme in all the template files.
+	 * If you're building a theme based on FounderScores, use a find and replace
+	 * to change 'founderscores' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'pontopress', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'founderscores', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function pontopress_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'pontopress' ),
+		'primary' => esc_html__( 'Primary', 'founderscores' ),
 	) );
 
 	/*
@@ -60,13 +60,13 @@ function pontopress_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'pontopress_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'founderscores_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'pontopress_setup' );
+add_action( 'after_setup_theme', 'founderscores_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -75,44 +75,44 @@ add_action( 'after_setup_theme', 'pontopress_setup' );
  *
  * @global int $content_width
  */
-function pontopress_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'pontopress_content_width', 640 );
+function founderscores_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'founderscores_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'pontopress_content_width', 0 );
+add_action( 'after_setup_theme', 'founderscores_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function pontopress_widgets_init() {
+function founderscores_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'pontopress' ),
+		'name'          => esc_html__( 'Sidebar', 'founderscores' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'pontopress' ),
+		'description'   => esc_html__( 'Add widgets here.', 'founderscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'pontopress_widgets_init' );
+add_action( 'widgets_init', 'founderscores_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function pontopress_scripts() {
-	wp_enqueue_style( 'pontopress-style', get_stylesheet_uri() );
+function founderscores_scripts() {
+	wp_enqueue_style( 'founderscores-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'pontopress-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'founderscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'pontopress-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'founderscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'pontopress_scripts' );
+add_action( 'wp_enqueue_scripts', 'founderscores_scripts' );
 
 /**
  * Implement the Custom Header feature.
