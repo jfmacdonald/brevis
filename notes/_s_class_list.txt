@@ -1,0 +1,171 @@
+
+FILE 404.php
+	content-area
+	error-404 not-found
+	page-content
+	page-header
+	page-title
+	site-main
+	widget widget_categories
+	widget-title
+
+FILE archive.php
+	archive-description
+	content-area
+	page-header
+	page-title
+	site-main
+
+FILE comments.php
+	comment-list
+	comments-area
+	comments-title
+	nav-links
+	nav-next
+	nav-previous
+	navigation comment-navigation
+	no-comments
+	screen-reader-text
+
+FILE footer.php
+	sep
+	site-footer
+	site-info
+
+FILE functions.php
+	widget-title
+
+FILE header.php
+	main-navigation
+	menu-toggle
+	site
+	site-branding
+	site-content
+	site-description
+	site-header
+	site-title
+	skip-link screen-reader-text
+
+FILE index.php
+	content-area
+	page-title screen-reader-text
+	site-main
+
+FILE page.php
+	content-area
+	site-main
+
+FILE search.php
+	content-area
+	page-header
+	page-title
+	site-main
+
+FILE sidebar.php
+	widget-area
+
+FILE single.php
+	content-area
+	site-main
+
+FILE inc/custom-header.php
+
+FILE inc/customizer.php
+
+FILE inc/extras.php
+
+FILE inc/jetpack.php
+
+FILE inc/template-tags.php
+	author vcard
+	cat-links
+	comments-link
+	edit-link
+	entry-date published
+	entry-date published updated
+	posted-on
+	screen-reader-text
+	tags-links
+
+FILE template-parts/content-none.php
+	no-results not-found
+	page-content
+	page-header
+	page-title
+
+FILE template-parts/content-page.php
+	edit-link
+	entry-content
+	entry-footer
+	entry-header
+	entry-title
+	page-links
+	screen-reader-text
+
+FILE template-parts/content-search.php
+	entry-footer
+	entry-header
+	entry-meta
+	entry-summary
+	entry-title
+
+FILE template-parts/content.php
+	entry-content
+	entry-footer
+	entry-header
+	entry-meta
+	entry-title
+	meta-nav
+	page-links
+	screen-reader-text
+
+ALL
+	archive-description
+	author vcard
+	cat-links
+	comment-list
+	comments-area
+	comments-link
+	comments-title
+	content-area
+	edit-link
+	entry-content
+	entry-date published
+	entry-date published updated
+	entry-footer
+	entry-header
+	entry-meta
+	entry-summary
+	entry-title
+	error-404 not-found
+	main-navigation
+	menu-toggle
+	meta-nav
+	nav-links
+	nav-next
+	nav-previous
+	navigation comment-navigation
+	no-comments
+	no-results not-found
+	page-content
+	page-header
+	page-links
+	page-title
+	page-title screen-reader-text
+	posted-on
+	screen-reader-text
+	sep
+	site
+	site-branding
+	site-content
+	site-description
+	site-footer
+	site-header
+	site-info
+	site-main
+	site-title
+	skip-link screen-reader-text
+	tags-links
+	widget widget_categories
+	widget-area
+	widget-title
