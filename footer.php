@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package FounderScores
+ * @package brevis
  */
 
 ?>
@@ -15,9 +15,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'founderscores' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'founderscores' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'brevis' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'brevis' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'founderscores' ), 'founderscores', '<a href="http://jfmacdonald.com" rel="designer">John Farrell MacDonald</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'brevis' ), 'brevis', '<a href="http://jfmacdonald.com" rel="designer">John Farrell MacDonald</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
