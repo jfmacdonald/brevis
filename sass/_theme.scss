@@ -1,0 +1,317 @@
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+
+
+.site {
+  @extend .row;
+  @include breakpoint(medium) {
+    padding: 4%;
+  }
+}
+
+.site-top-bar {
+  @extend .title-bar;
+  position: fixed;
+  width: 100%;
+  .menu-icon {
+    display: inline-block;
+    float: right;
+    margin-top: 0.9rem;
+    margin-right: 10px;
+  }
+  .branding {
+    .title {
+      margin-top: 1.1rem;
+      margin-left: 0.6rem;
+      font-size: 0.7rem;
+      font-family: $header-font-family;
+      text-transform: uppercase;
+      display: inline-block;
+      float: left;
+    }
+    img {
+      display: inline-block;
+      float: left;
+      height: 2.4rem;
+      width: auto;
+    }
+  }
+}
+
+.site-header {
+  @include breakpoint(small only) {
+    width: 100%;
+    margin-top: 3.4rem;
+    background: $light-gray;
+  }
+  @include breakpoint(medium) {
+    position: fixed;
+    width: grid_column(2);
+    height: 90vh;
+    top: 10vh;
+  }
+  .branding {
+    @extend .show-for-medium;
+    .title {
+      margin-top: -0.8rem;
+      margin-left: 1.8rem;
+      font-family: $font-family-monospace;
+      font-size: 1rem;
+      text-transform: lowercase;
+    }
+  }
+}
+
+.site-navigation {
+  @extend .menu;
+  @extend .vertical;
+  ul {
+    list-style-type: none;
+    margin-left: 1.8rem;
+    line-height: 2.4rem;
+  }
+  a {
+    font-family: $font-family-monospace;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+}
+
+.site-content {
+  @extend .medium-offset-2;
+  @extend .medium-10;
+  @extend .columns;
+  @include breakpoint(small only) {
+    margin-top: 4.4rem;
+  }
+}
+
+.site-main {
+  article {
+    @extend .row;
+    .article-aside {
+      @extend .columns;
+      @extend .medium-3;
+      @extend .float-left;
+      img {
+        margin-top: 0.375rem;
+        width: 100%;
+      }
+    }
+    .article-main {
+      @extend .columns;
+      @extend .medium-9;
+      @extend .float-right;
+    }
+  }
+  #top {
+    img {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.landing {
+  @extend .columns;
+  @extend .medium-10;
+  @extend .large-8;
+  @extend .end;
+  height: 100vh;
+  .landing-text {
+    color: $black; //$white;
+    background: rgba(245,245,245,0.5);
+  }
+  h1 {
+    font-size: 1.2rem;
+    padding: 1rem;
+    @include breakpoint(portrait) {
+      margin-top: 15%;
+    }
+  }
+  p {
+    padding: 0 1rem 1rem 1rem;
+    font-size: 1.2rem;
+  }
+  @include breakpoint(medium) {
+    h1, p {
+      font-size: 1.4rem;
+    }
+  }
+  @include breakpoint(large) {
+    h1, p {
+      font-size: 1.8rem;
+    }
+    h1 {
+      margin-top: 20%;
+    }
+  }
+}
+
+$landing-background: (
+        landscape: 40%,
+        portrait: 75%,
+);
+
+.landing-background {
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: map_get($landing-background, landscape);
+  width: 100%; // map_get($landing-background, landscape);
+  height: 100%;
+  position: fixed;
+  z-index: -99;
+  bottom: 0;
+  right: 0;
+  opacity: 0.6;
+  @include breakpoint(portrait) {
+    // width: map_get($landing-background, portrait);
+    background-size: map_get($landing-background, portrait);
+  }
+}
+
+.home-background {
+  @extend .landing-background;
+  background-image: url(images/john-pensive-right.png);
+}
+
+.about-background {
+  @extend .landing-background;
+  background-image: url(images/san-diego-filtered@1440x960.jpg);
+  background-size: cover;
+}
+
+.entry-title {
+  @extend .columns;
+  @extend .small-12;
+}
+
+.entry-thumbnail {
+  @extend .columns;
+  @extend .medium-3;
+  @extend .float-left;
+  img {
+    width: 100%;
+  }
+}
+
+.with-thumbnail {
+  @extend .columns;
+  @extend .medium-9;
+}
+
+.without-thumbnail {
+  @extend .columns;
+  @extend .small-12;
+}
+
+.entry-image {
+  background: lighten(map_get( $theme-palette, primary), 20%);
+  @extend .columns;
+  @extend .medium-8;
+  @extend .float-right;
+  padding: 10px;
+  img {
+    width: 100%;
+  }
+}
+
+.with-image {
+  @extend .columns;
+  @extend .medium-4;
+}
+
+.without-image {
+  @extend .columns;
+  @extend .small-12;
+}
+
+.widget-area {
+  @extend .row;
+  @extend .small-up-1;
+  @extend .medium-up-3;
+
+  .widget {
+    @extend .column;
+  }
+}
+
+.site-footer {
+  @include breakpoint(medium) {
+    padding: 4%;
+  }
+  clear: both;
+  background: map_get( $theme-palette, complement);
+  color: $white;
+  p, h2, h3, h4 {
+    color: $white;
+  }
+  a {
+    color: map_get( $theme-palette, plus30);
+  }
+  a:hover {
+    color: map_get( $theme-palette, minus30);
+  }
+}
+
+.no-js {
+  @include breakpoint(small only) {
+    .site-header {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .small-header {
+      display: none;
+    }
+  }
+  .home-background {
+    display: none;
+  }
+}
+
+

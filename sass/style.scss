@@ -13,94 +13,30 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Brevis is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+Brevis is based on Underscores and Foundation.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+
+Foundation for Sites is distributed under the terms of the MIT license.
+http://foundation.zurb.com, Copyright (c) 2016 ZURB, inc.
+
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+/* Foundation */
+@import "settings";
+@import "foundation";
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
+/* Font-Awesome */
+@import "font-awesome";
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "typography/typography";
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "navigation/navigation";
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
+// WordPress compatibility
 @import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+@import "media/media";
 @import "site/site";
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
+/* Theme customizations (and in settings) */
+@import "theme";
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
+
