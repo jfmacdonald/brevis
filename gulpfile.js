@@ -42,6 +42,7 @@ var themeScripts = [
 
 var sassPaths = [
     'components/foundation-sites/scss',
+    'components/font-awesome/scss',
     'components/motion-ui/src'
 ];
 
